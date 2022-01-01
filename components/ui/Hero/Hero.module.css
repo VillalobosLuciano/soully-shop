@@ -1,0 +1,16 @@
+.root {
+  @apply flex flex-col justify-center lg:flex-row;
+}
+
+.headline {
+  @apply flex max-w-xl text-4xl lg:text-5xl leading-10 text-gray-600 sm:leading-none
+         sm:tracking-tight;
+}
+
+.description {
+  @apply mt-5 text-xl leading-7 text-gray-900;
+}
+
+.link {
+  @apply block text-gray-900 pt-3 font-bold hover:underline cursor-pointer;
+}

@@ -1,0 +1,47 @@
+.root {
+  @apply bg-secondary text-accents-1 cursor-pointer px-10 leading-6 tracking-wide font-medium
+  capitalize py-4 items-center;
+  @apply py-2 bg-primary text-gray-600 px-3 mr-3 inline-flex
+  items-center justify-center transition duration-150 ease-in-out
+  p-0 shadow-none border-gray-200 border box-border;
+
+  & > span {
+    @apply absolute;
+  }
+
+  &:hover {
+    @apply transform scale-110 border border-gray-400;
+  }
+
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.sm {
+  @apply h-7 bg-gray-100 border-gray-300 border -ml-1 -mt-1 font-normal;
+}
+
+.color {
+  @apply text-black transition duration-150 ease-in-out;
+
+  &:hover {
+    @apply text-black;
+  }
+
+  &.dark,
+  &.dark:hover {
+    color: white !important;
+  }
+}
+
+.active {
+  &.size,
+  &.color {
+    @apply border-gray-500 border-2;
+  }
+  &.net,
+  &.type {
+    @apply bg-[#0899A7] bg-opacity-5 text-[#0899A7] border-[#0899A7];
+  }
+}

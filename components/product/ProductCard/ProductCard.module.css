@@ -1,0 +1,72 @@
+.root {
+  @apply relative bg-white flex flex-col overflow-hidden;
+  max-height: 100% !important;
+
+  &:hover {
+    & .productBg:before {
+      transform: scale(0.99);
+    }
+
+    & .productImage {
+      transform: scale(1.08);
+    }
+    & .addToCart {
+      @apply transition duration-500 ease-in-out opacity-100;
+    }
+  }
+
+  &:nth-child(6n + 1) .productBg {
+    @apply bg-[#B5EAEA];
+  }
+
+  &:nth-child(6n + 2) .productBg {
+    @apply bg-[#EDF6E5];
+  }
+
+  &:nth-child(6n + 3) .productBg {
+    @apply bg-[#FFBCBC];
+  }
+}
+
+.productImage {
+  @apply transition-transform duration-500 block cursor-pointer;
+}
+
+.productBg {
+  @apply absolute inset-0 z-0;
+  background-color: #212529;
+
+  &:before {
+    @apply transition-transform duration-500 block w-full h-full bg-repeat-space;
+    content: "";
+    background-image: url("/product-pattern-bg.svg");
+  }
+}
+
+.productTag {
+  @apply absolute top-0 left-0 z-20 cursor-pointer;
+
+  & > * {
+    font-size: 1.5rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+.productTitle {
+  @apply font-semibold text-gray-600;
+  line-height: 2em;
+
+  & span {
+    @apply py-4 px-6 bg-primary;
+    box-decoration-break: clone;
+  }
+}
+
+.productPrice {
+  @apply bg-primary pb-4 pt-2 px-6 font-semibold text-base text-gray-600;
+  letter-spacing: 0.4px;
+}
+
+.addToCart {
+  @apply opacity-0 absolute bottom-0 right-0 z-20;
+}
