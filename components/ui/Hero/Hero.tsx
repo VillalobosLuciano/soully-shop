@@ -7,6 +7,7 @@ import smallBatches from "../../../public/images/small-batches.svg";
 import organicIngredients from "../../../public/images/organic-ingredients.svg";
 import zeroWaste from "../../../public/images/zero-waste.svg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const perks = [
   {
@@ -56,8 +57,17 @@ const Hero: FC<Props> = ({ headline, description }) => {
       </div>
 
       <ul className="grid grid-cols-1 gap-6 pt-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:pb-24 lg:pt-20 max-w-7xl">
-        {perks.map((perk) => (
-          <li key={perk.name} className="col-span-1">
+        {perks.map((perk, i) => (
+          <motion.li
+            key={perk.name}
+            className="col-span-1"
+            initial={{
+              opacity: 0,
+              translateX: -15,
+            }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.2 }}
+          >
             <div className="flex w-full">
               <div className="flex-shrink-0">
                 <div className="relative h-24 w-28">
@@ -73,7 +83,7 @@ const Hero: FC<Props> = ({ headline, description }) => {
                 </p>
               </div>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </>
