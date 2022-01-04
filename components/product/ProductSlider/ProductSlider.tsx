@@ -5,25 +5,51 @@ import cn from "classnames";
 
 const ProductSlider: FC = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     loop: true,
     slideChanged(s) {
       setCurrentSlide(s.track.details.rel);
     },
+    created() {
+      setLoaded(true);
+    },
   });
+
+  const slides = instanceRef.current?.track.details.slides;
 
   return (
     <div className={s.root}>
       <div ref={sliderRef} className="h-full transition-opacity keen-slider">
-        <button
-          onClick={instanceRef.current?.prev}
-          className={cn(s.leftControl, s.control)}
-        />
-        <button
-          onClick={instanceRef.current?.next}
-          className={cn(s.rightControl, s.control)}
-        />
+        {loaded && instanceRef.current && (
+          <>
+            <button
+              onClick={instanceRef.current?.prev}
+              className={cn(s.leftControl, s.control)}
+            />
+            <button
+              onClick={instanceRef.current?.next}
+              className={cn(s.rightControl, s.control)}
+            />
+
+            <div className={s.dots}>
+              {slides?.map((slide, index) => {
+                return (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      instanceRef.current?.moveToIdx(index);
+                    }}
+                    className={
+                      currentSlide === index ? `${s.dotActive}` : `${s.dot}`
+                    }
+                  ></button>
+                );
+              })}
+            </div>
+          </>
+        )}
         {Children.map(children, (child) => {
           if (isValidElement(child)) {
             return {
@@ -35,12 +61,6 @@ const ProductSlider: FC = ({ children }) => {
                 } keen-slider__slide`,
               },
             };
-
-            // return React.cloneElement(child, {
-            //   className: `${
-            //     child.props.className ? `${child.props.className}` : ""
-            //   } keen-slider__slide`
-            // })
           }
 
           return child;

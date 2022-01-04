@@ -1,16 +1,16 @@
 .root {
   @apply bg-secondary text-accents-1 cursor-pointer px-10 leading-6 tracking-wide font-medium
   capitalize py-4 items-center;
-  @apply py-2 bg-primary text-gray-600 px-3 mr-3 inline-flex
+  @apply py-2 bg-primary text-gray-600 px-6 mr-3 inline-flex
   items-center justify-center transition duration-150 ease-in-out
-  p-0 shadow-none border-gray-200 border box-border;
+  p-0 shadow border-gray-100 border box-border rounded;
 
   & > span {
     @apply absolute;
   }
 
   &:hover {
-    @apply transform scale-110 border border-gray-400;
+    @apply transform scale-110 border border-gray-300;
   }
 
   &:focus {

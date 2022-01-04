@@ -103,10 +103,10 @@ const ProductView: FC<Props> = ({ product, products }) => {
                     {product.description}
                   </div>
 
-                  <div className="mt-2 space-y-8">
+                  <div className="mt-4 space-y-6">
                     {product.options.map((option) => (
                       <div key={option.id} className="">
-                        <h2 className="pb-1 text-lg font-medium text-gray-800 capitalize">
+                        <h2 className="pb-1 text-lg font-light text-gray-600 capitalize">
                           {option.displayName === "net"
                             ? "Net Weight"
                             : option.displayName}

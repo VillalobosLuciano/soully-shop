@@ -71,7 +71,7 @@
 }
 
 .button {
-  @apply my-12 lg:max-w-[300px];
+  @apply mb-8 lg:mb-0 mt-20 lg:mt-12 lg:max-w-[300px];
   text-align: center;
   width: 100%;
   /* max-width: 300px; */
