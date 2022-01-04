@@ -68,7 +68,7 @@ const Hero: FC<Props> = ({ headline, description }) => {
                 <h3 className="text-sm font-medium text-gray-600">
                   {perk.name}
                 </h3>
-                <p className="pr-4 mt-2 text-sm text-gray-500 md:pr-0">
+                <p className="pr-6 mt-2 text-sm text-gray-500 md:pr-0">
                   {perk.description}
                 </p>
               </div>
