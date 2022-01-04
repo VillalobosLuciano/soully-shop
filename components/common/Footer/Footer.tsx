@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer
       className={cn({
         "lg:max-w-7xl mx-auto lg:mt-12": isHome,
-        "mx-2 lg:px-16 lg:max-w-8xl lg:mt-8": !isHome,
+        "mx-2 lg:px-10 lg:max-w-8xl lg:mt-8": !isHome,
       })}
     >
       <div className="pt-10 pb-10 md:flex md:items-center md:justify-between">

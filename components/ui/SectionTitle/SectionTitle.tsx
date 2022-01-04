@@ -8,7 +8,7 @@ interface Props {
 
 const Hero: FC<Props> = ({ headline, title }) => {
   return (
-    <div className="py-2 mx-auto max-w-7xl">
+    <div className="px-4 pt-12 pb-2 mx-auto sm:pt-2 max-w-7xl">
       <h2 className="lg:text-lg font-semibold tracking-tight text-[#0899a7]">
         {headline}
       </h2>

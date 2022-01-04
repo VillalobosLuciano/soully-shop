@@ -54,6 +54,7 @@ const CartItem = ({
         <div className="relative w-16 h-16 overflow-hidden cursor-pointer bg-[#0899A7] bg-opacity-10">
           <Image
             onClick={() => {}}
+            alt={item.variant.name}
             className={s.productImage}
             width={150}
             height={150}

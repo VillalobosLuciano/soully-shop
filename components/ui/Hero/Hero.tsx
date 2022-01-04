@@ -44,9 +44,9 @@ interface Props {
 const Hero: FC<Props> = ({ headline, description }) => {
   return (
     <>
-      <div className="px-4 mx-auto max-w-7xl">
+      <div className="px-4 pt-20 mx-auto max-w-7xl">
         <div className={s.root}>
-          <div className="space-y-4 text-center lg:pt-32">
+          <div className="mx-auto space-y-4 text-center lg:pt-32">
             <div className="relative h-[130px] cursor-pointer w-[280px] mx-auto">
               <Image alt="Soully" src={logo} layout="fill" />
             </div>
@@ -54,30 +54,28 @@ const Hero: FC<Props> = ({ headline, description }) => {
           </div>
         </div>
       </div>
-      <div className="">
-        <h2 className="sr-only">Our perks</h2>
-        <div className="pb-8 mx-auto lg:pb-24 lg:pt-20 max-w-7xl">
-          <div className="flex space-x-10">
-            {perks.map((perk) => (
-              <div key={perk.name} className="sm:flex">
-                <div className="sm:flex-shrink-0">
-                  <div className="relative h-24 w-28">
-                    <Image src={perk.imageSrc} alt="" layout="fill" />
-                  </div>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <h3 className="text-sm font-medium text-gray-600">
-                    {perk.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-500">
-                    {perk.description}
-                  </p>
+
+      <ul className="grid grid-cols-1 gap-6 pt-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:pb-24 lg:pt-20 max-w-7xl">
+        {perks.map((perk) => (
+          <li key={perk.name} className="col-span-1">
+            <div className="flex w-full">
+              <div className="flex-shrink-0">
+                <div className="relative h-24 w-28">
+                  <Image src={perk.imageSrc} alt="" layout="fill" />
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
+              <div className="mt-3 sm:mt-0 sm:ml-3">
+                <h3 className="text-sm font-medium text-gray-600">
+                  {perk.name}
+                </h3>
+                <p className="pr-4 mt-2 text-sm text-gray-500 md:pr-0">
+                  {perk.description}
+                </p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </>
   );
 };

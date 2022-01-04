@@ -85,7 +85,7 @@ const CartSidebar: FC = () => {
                 <span>{`$ ${data?.totalPrice}`}</span>
               </div>
             </div>
-            <Button Component="a" href="/">
+            <Button Component="a" href="/api/checkout">
               Proceed to Checkout
             </Button>
           </div>

@@ -16,15 +16,15 @@
   }
 
   &:nth-child(6n + 1) .productBg {
-    @apply bg-[#B5EAEA];
+    @apply bg-[#f9c7ae] bg-opacity-10;
   }
 
   &:nth-child(6n + 2) .productBg {
-    @apply bg-[#EDF6E5];
+    @apply bg-[#fabb51] bg-opacity-10;
   }
 
   &:nth-child(6n + 3) .productBg {
-    @apply bg-[#FFBCBC];
+    @apply bg-[#baabda] bg-opacity-10;
   }
 }
 

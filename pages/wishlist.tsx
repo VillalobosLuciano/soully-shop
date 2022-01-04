@@ -20,7 +20,7 @@ export default function Wishlist() {
                 Your wishlist is empty
               </h2>
               <p className="px-10 pt-2 text-center text-accents-6">
-                Even so, I'm still not sure what to show here.
+                Even so, I&apos;m still not sure what to show here.
               </p>
             </div>
           ) : (

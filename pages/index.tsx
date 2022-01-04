@@ -1,7 +1,7 @@
 import type { InferGetStaticPropsType } from "next";
 import { getAllProducts } from "@framework/product";
 import { getConfig } from "@framework/api/config";
-import { Layout } from "@components/common";
+import { Layout, Navbar } from "@components/common";
 import { ProductCard } from "@components/product";
 import { Grid, Hero, SectionTitle } from "@components/ui";
 
@@ -31,22 +31,13 @@ export default function Home({
           headline="Simple Nut Butter"
           title="Only peanuts, cashews and almonds."
         />
-        <div className="pt-4 pb-16 mx-auto sm:pb-20">
+        <div className="pb-8 mx-auto lg:pt-4 sm:pb-20">
           <Grid layout="B">
             {products.slice(0, 3).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </Grid>
         </div>
-        {/* <SectionTitle
-          headline="Especial Blends"
-          title="Our most successful recipes"
-        />
-        <Grid layout="B">
-          {products.slice(0, 3).map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </Grid> */}
       </div>
     </>
   );

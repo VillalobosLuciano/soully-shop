@@ -13,8 +13,7 @@ const Layout: FC = ({ children }) => {
   return (
     <ApiProvider>
       <div className={s.root}>
-        <Usernav />
-        {/* <Navbar /> */}
+        <Navbar />
         <Sidebar onClose={closeSidebar} isOpen={isSidebarOpen}>
           <CartSidebar />
         </Sidebar>

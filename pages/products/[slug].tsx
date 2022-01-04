@@ -7,6 +7,7 @@ import {
   InferGetStaticPropsType,
 } from "next";
 import { ProductView } from "@components/product";
+import getAllProducts from "../../framework/shopify/product/get-all-products";
 
 // fetch all of the products slugs
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -19,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-// provide product spefici data to the page
+// provide product data to the page
 export const getStaticProps = async ({
   params,
 }: GetStaticPropsContext<{ slug: string }>) => {
@@ -30,17 +31,23 @@ export const getStaticProps = async ({
     variables: { slug: params?.slug },
   });
 
+  const products = await getAllProducts(config);
+
   return {
     props: {
       product,
+      products,
     },
   };
 };
 
 export default function ProductSlug({
   product,
+  products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <>{product && <ProductView product={product} />}</>;
+  return (
+    <>{product && <ProductView product={product} products={products} />}</>
+  );
 }
 
 ProductSlug.Layout = Layout;
