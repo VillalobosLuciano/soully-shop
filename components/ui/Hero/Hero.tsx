@@ -47,7 +47,7 @@ const Hero: FC<Props> = ({ headline, description }) => {
     <>
       <div className="px-4 pt-20 mx-auto max-w-7xl">
         <div className={s.root}>
-          <div className="mx-auto space-y-4 text-center lg:pt-32">
+          <div className="pt-10 pb-2 mx-auto space-y-4 text-center lg:pt-32">
             <div className="relative h-[130px] cursor-pointer w-[280px] mx-auto">
               <Image alt="Soully" src={logo} layout="fill" />
             </div>
