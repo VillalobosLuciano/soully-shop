@@ -66,7 +66,11 @@ const ProductView: FC<Props> = ({ product, products }) => {
                 >
                   <div className={s.imageNameBox}>
                     <h1 className={s.name}>{product.name}</h1>
-                    <div className={s.price}>{`$ ${product.price.value}`}</div>
+                    <div className={s.price}>
+                      {variant
+                        ? `$ ${variant?.price}`
+                        : `$ ${product.price.value}`}
+                    </div>
                   </div>
                   <ProductSlider>
                     {product.images.map((image) => (

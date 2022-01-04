@@ -78,7 +78,7 @@
 }
 
 .dots {
-  @apply flex items-center absolute z-50 bottom-6 left-5 space-x-2 lg:hidden;
+  @apply flex items-center absolute z-10 bottom-6 left-5 space-x-2 lg:hidden;
 }
 
 .dot {

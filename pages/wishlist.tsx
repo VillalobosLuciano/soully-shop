@@ -8,7 +8,6 @@ export default function Wishlist() {
 
   return (
     <Container>
-      <Navbar />
       <div className="mt-3 mb-20">
         <div className="flex flex-col h-screen -mt-24 group">
           {isEmpty ? (
