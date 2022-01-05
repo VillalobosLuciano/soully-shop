@@ -33,6 +33,7 @@ const Navbar: FC = () => {
                     <a
                       href="https://lucianov-dev.vercel.app/projects/soully"
                       target="_blank"
+                      rel="noreferrer"
                       className="font-bold text-white underline"
                     >
                       {" "}
