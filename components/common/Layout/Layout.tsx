@@ -5,7 +5,6 @@ import { Sidebar } from "@components/ui";
 import { CartSidebar } from "@components/cart";
 import { useUI } from "@components/ui/context";
 import { ApiProvider } from "@framework";
-import Usernav from "../Usernav";
 
 const Layout: FC = ({ children }) => {
   const { isSidebarOpen, closeSidebar } = useUI();

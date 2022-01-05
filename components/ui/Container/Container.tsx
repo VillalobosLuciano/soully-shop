@@ -6,11 +6,7 @@ interface Props {
 }
 
 const Container: FC<Props> = ({ children, el: Component = "div" }) => {
-  return (
-    <Component className="pt-16 mx-auto lg:pt-24 max-w-8xl">
-      {children}
-    </Component>
-  );
+  return <Component className="mx-auto max-w-8xl">{children}</Component>;
 };
 
 export default Container;
