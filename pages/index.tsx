@@ -31,7 +31,7 @@ export default function Home({
           headline="Simple Nut Butter"
           title="Only peanuts, cashews and almonds."
         />
-        <div className="pb-8 mx-auto lg:pt-4 sm:pb-20">
+        <div className="pb-8 mx-auto lg:pt-4 md:pb-28">
           <Grid layout="B">
             {products.slice(0, 3).map((product) => (
               <ProductCard key={product.id} product={product} />

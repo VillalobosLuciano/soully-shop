@@ -13,7 +13,7 @@ export const Footer = () => {
         "mx-2 lg:px-10 lg:max-w-8xl lg:mt-8": !isHome,
       })}
     >
-      <div className="pt-10 pb-10 md:flex md:items-center md:justify-between">
+      <div className="py-10 md:flex md:items-center md:justify-between">
         <SocialIcons />
         <div className="mt-4 md:mt-0 md:order-1">
           <p className="text-base text-center text-gray-800">
