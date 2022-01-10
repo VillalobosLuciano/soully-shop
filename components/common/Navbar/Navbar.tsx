@@ -31,7 +31,7 @@ const Navbar: FC = () => {
                   </span>
                   <span className="block sm:ml-2 sm:inline-block">
                     <a
-                      href="https://lucianov-dev.vercel.app/projects/soully"
+                      href="https://www.lucianov.dev/projects/soully"
                       target="_blank"
                       rel="noreferrer"
                       className="font-bold text-white underline"
